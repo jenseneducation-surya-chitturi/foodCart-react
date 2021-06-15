@@ -10,10 +10,11 @@ import CartItem from './CartItem';
  const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`
  const hasItems = cartCtx.items.length > 0;
  const cartItemRemoveHandler = id => {
+   cartCtx.removeItem(id);
 
  }
  const cartItemAddHandler = item => {
-     
+  cartCtx.addItem(item);
 }
     const cartItems = (
         <ul className={classes['cart-items']}>
